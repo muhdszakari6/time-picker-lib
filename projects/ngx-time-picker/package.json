@@ -1,6 +1,6 @@
 {
-  "name": "ngx-time-picker",
-  "version": "1.0.0",
+  "name": "@salimzakari/ngx-time-picker",
+  "version": "1.0.1",
   "description": "An angular time picker component that allows user to select time.",
   "keywords": [
     "Angular time picker",

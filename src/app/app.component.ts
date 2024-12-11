@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NgxTimePickerModule } from "../../projects/ngx-time-picker/src/lib/ngx-time-picker.module";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxTimePickerModule } from '@salimzakari/ngx-time-picker';
 
 @Component({
   selector: 'app-root',

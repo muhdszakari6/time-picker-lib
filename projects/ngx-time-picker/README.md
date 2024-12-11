@@ -26,13 +26,13 @@ A time picker component for your angular application.
 Install ngx-time-picker via.
 
 ```bash
-npm i ngx-time-picker
+npm i @salimzakari/ngx-time-picker
 ```
 
 Once installed you need to import our main module in your application module or in your component for example:
 
 ```javascript
-import { NgxTimePickerModule } from "ngx-time-picker";
+import { NgxTimePickerModule } from "@salimzakari/ngx-time-picker";
 
 @NgModule({
   declarations: [AppComponent],
@@ -48,22 +48,18 @@ ngx-time-picker with form control: Pass in formControlName like you would in any
 
 ```html
 <form [formGroup]="form">
-  ....
   <ngx-time-picker formControlName="startTime"> </ngx-time-picker>
-  ....
 </form>
 ```
 
 ngx-time-picker with NgModel.
 
 ```html
-....
 <ngx-time-picker [(ngModel)]="time"></ngx-time-picker>
-....
 ```
 
 ngx-time-picker with custom class for dropdown, input and selected class.
 
 ```html
-.... <ngx-time-picker [(ngModel)]="customTime" inputClass="input" dropdownClass="dropdown" selectedClass="selected"></ngx-time-picker> ....
+<ngx-time-picker [(ngModel)]="customTime" inputClass="input" dropdownClass="dropdown" selectedClass="selected"></ngx-time-picker>
 ```
