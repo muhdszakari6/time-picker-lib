@@ -1,63 +1,69 @@
 # NgxTimePicker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+A time picker component for your angular application.
 
-## Code scaffolding
+## Dependencies
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [Angular](https://angular.io/)
 
-```bash
-ng generate component component-name
-```
+## Features
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Select time from a dropdown
+- Supports Reactive Forms
+- Supports Template-Driven Forms
+- Customizable styles
 
-```bash
-ng generate --help
-```
+## Demo
 
-## Building
+[Demo Application](https://ngx-time-picker-demo.vercel.app/)
 
-To build the library, run:
+## Example
 
-```bash
-ng build ngx-time-picker
-```
+![ngx-time-picker example ](https://res.cloudinary.com/muhdsalim/image/upload/v1733935007/Screenshot_2024-12-11_at_16.41.22_qx8eeh.png)
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+## Installation
 
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/ngx-time-picker
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Install ngx-time-picker via.
 
 ```bash
-ng test
+npm i ngx-time-picker
 ```
 
-## Running end-to-end tests
+Once installed you need to import our main module in your application module or in your component for example:
 
-For end-to-end (e2e) testing, run:
+```javascript
+import { NgxTimePickerModule } from "ngx-time-picker";
 
-```bash
-ng e2e
+@NgModule({
+  declarations: [AppComponent],
+  imports: [NgxTimePickerModule],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Usage
 
-## Additional Resources
+ngx-time-picker with form control: Pass in formControlName like you would in any reactive form input.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```html
+<form [formGroup]="form">
+  ....
+  <ngx-time-picker formControlName="startTime"> </ngx-time-picker>
+  ....
+</form>
+```
+
+ngx-time-picker with NgModel.
+
+```html
+....
+<ngx-time-picker [(ngModel)]="time"></ngx-time-picker>
+....
+```
+
+ngx-time-picker with custom class for dropdown, input and selected class.
+
+```html
+.... <ngx-time-picker [(ngModel)]="customTime" inputClass="input" dropdownClass="dropdown" selectedClass="selected"></ngx-time-picker> ....
+```
