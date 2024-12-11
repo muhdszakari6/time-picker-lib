@@ -13,6 +13,5 @@ export class AppComponent {
   customTime: string = ""
   form = new FormGroup({
     time: new FormControl(null)
-
   })
 }
