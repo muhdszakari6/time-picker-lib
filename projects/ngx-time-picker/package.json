@@ -12,6 +12,7 @@
   ],
   "author": "Salim Zakari",
   "homepage": "https://ngx-time-picker-demo.vercel.app",
+  "repository": "https://github.com/muhdszakari6/time-picker-lib/tree/main/projects/ngx-time-picker",
   "peerDependencies": {
     "@angular/common": "^19.0.0",
     "@angular/core": "^19.0.0"
