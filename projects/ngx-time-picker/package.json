@@ -1,0 +1,23 @@
+{
+  "name": "ngx-time-picker",
+  "version": "0.0.1",
+  "description": "An angular time picker component that allows user to select time.",
+  "keywords": [
+    "Angular time picker",
+    "Angular time picker input",
+    "Time picker",
+    "Time picker input",
+    "Time input",
+    "ngx-time-picker"
+  ],
+  "author": "Salim Zakari",
+  "homepage": "https://ngx-time-picker-demo.vercel.app",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

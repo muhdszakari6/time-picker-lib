@@ -1,0 +1,26 @@
+<div class="ngx-time-picker">
+  <input #input [ngClass]="{'ngx-time-picker-error': showError}" (click)="toggleDropdown()" type="text"
+    [readOnly]="true" [value]="selectedHour || selectedMinute ? selectedHour+':'+selectedMinute : null"
+    [placeholder]="placeholder" [disabled]="disabled" (change)="emitChange()" class="time-picker-input"
+    [class]="inputClass" />
+  <div *ngIf="dropdownOpen" class="ngx-time-picker-dropdown" [style.top]="top+'px'" [style.left]="left+'px'"
+    [class]="dropdownClass">
+    <div class="ngx-time-picker-time-options">
+      <ul #hourContainer>
+        <li #hour *ngFor="let hour of hours" class="time-option" (click)="selectHour(hour)"
+          [ngClass]=" hour == selectedHour && selectedClass.length != 0 ? selectedClass : hour == selectedHour ? 'ngx-time-picker-selected' : ''">
+          {{hour}}
+        </li>
+      </ul>
+      <ul #minuteContainer>
+        <li #minute *ngFor="let minute of minutes" class="time-option" (click)="selectMinute(minute)"
+          [ngClass]=" minute == selectedMinute && selectedClass.length != 0 ? selectedClass : minute == selectedMinute ? 'ngx-time-picker-selected' : ''">
+          {{minute}}
+        </li>
+      </ul>
+    </div>
+    <div class="ngx-time-picker-selected">
+      <button type="button" (click)="toggleDropdown()">Ok</button>
+    </div>
+  </div>
+</div>

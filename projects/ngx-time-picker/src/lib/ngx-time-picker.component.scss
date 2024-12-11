@@ -1,0 +1,113 @@
+:host {
+  display: block;
+}
+
+.ngx-time-picker {
+  display: block;
+  position: relative;
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 40px #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.6;
+  }
+}
+
+.ngx-time-picker .ngx-time-picker-icon-prefix {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.625rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.ngx-time-picker .ngx-time-picker-icon-suffix {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.625rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.ngx-time-picker .ngx-time-picker-input {
+  position: relative;
+  width: 100%;
+  appearance: none;
+  text-align: center;
+}
+
+.ngx-time-picker .ngx-time-picker-error {
+  border: 1px solid #c82020;
+}
+
+.ngx-time-picker .ngx-time-picker-dropdown {
+  position: fixed;
+  z-index: 20;
+  border-radius: 1rem;
+  padding: 0.5rem 0.3rem;
+  font-size: 0.875rem;
+  box-shadow: 0px 4px 8px 0px #0000001a;
+  background: white;
+}
+
+.ngx-time-picker .ngx-time-picker-time-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  max-height: 200px;
+}
+
+.ngx-time-picker .ngx-time-picker-time-options ul {
+  list-style: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.ngx-time-picker .ngx-time-picker-time-options li {
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.75rem;
+}
+
+.ngx-time-picker .ngx-time-picker-time-options .ngx-time-picker-selected {
+  background: #000;
+  color: white;
+}
+
+.ngx-time-picker .ngx-time-picker-selected {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.ngx-time-picker .ngx-time-picker-selected button {
+  width: 100%;
+  outline: none;
+  background: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  border: none;
+}
